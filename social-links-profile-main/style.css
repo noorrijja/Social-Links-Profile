@@ -1,0 +1,122 @@
+body {
+  position: relative;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+  background-color: hsl(0, 0%, 8%);
+  /* overflow: hidden; */
+}
+.main {
+  background-color: hsl(0, 1%, 16%);
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-inline: clamp(5px, 20px, 30px);
+  padding-block: clamp(5px, 20px, 30px);
+  width: min(75%, 100%);
+  height: auto;
+  border-radius: 15px;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
+}
+button {
+  padding-block: clamp(10px, 15px, 30px);
+  border-radius: 8px;
+  font-size: clamp(12px, 14px, 16px);
+  background-color: hsl(0, 1%, 32%);
+  border: none;
+  color: white;
+  font-weight: 600;
+}
+button:hover {
+  background-color: hsl(75, 94%, 57%);
+}
+.profile-picture {
+  width: max(50px, 80px);
+  border-radius: 50px;
+}
+.name {
+  font-size: max(20px, 28px);
+  margin-bottom: 0;
+  letter-spacing: clamp(0.5px 0.4px, 1px);
+}
+.work-location {
+  margin-bottom: 0;
+  font-size: max(14px, 16px);
+  color: hsl(75, 94%, 57%);
+  font-weight: 600;
+}
+.role {
+  font-size: clamp(14px, 16px, 18px);
+  white-space: nowrap;
+}
+@media only screen and (min-width: 640px) {
+  .main {
+    width: min(40%, 50%);
+  }
+  button {
+    font-size: clamp(16px, 18px, 26px);
+  }
+  .role {
+    font-size: clamp(12px, 14px, 16px);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .main {
+    width: min(30%, 50%);
+  }
+  button {
+    font-size: clamp(14px, 16px, 18px);
+  }
+  .role {
+    font-size: clamp(18px, 20px, 22px);
+  }
+  .work-location {
+    font-size: max(16px, 18px);
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .main {
+    width: min(30%, 50%);
+  }
+  button {
+    font-size: clamp(16px, 18px, 20px);
+    padding-block: clamp(8px, 10px, 12px);
+  }
+  .role {
+    font-size: clamp(18px, 20px, 22px);
+  }
+  .work-location {
+    font-size: clamp(16px, 18px, 24px);
+  }
+}
+@media only screen and (min-width: 1400px) {
+  .main {
+    width: min(30%, 50%);
+  }
+  .socials {
+    gap: 15px;
+  }
+  button {
+    font-size: clamp(16px, 18px, 20px);
+    padding-block: clamp(10px, 12px, 14px);
+  }
+  .role {
+    font-size: clamp(18px, 20px, 22px);
+  }
+  .work-location {
+    font-size: clamp(16px, 18px, 24px);
+  }
+}
